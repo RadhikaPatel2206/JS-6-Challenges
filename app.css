@@ -1,0 +1,137 @@
+body {
+    background-image: url(https://image.freepik.com/free-photo/wooden-background_24972-623.jpg);
+    background-size: cover;
+    color: white;
+    font-family: 'Comic Sans', Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 1000px;
+    text-align: center;
+    padding: 24px;
+}
+
+.button-div {
+    padding: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.result-image {
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    margin: 12px;
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+#rps-output {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rps-start-image, .rps-end-image {
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    margin: 12px;
+}
+
+.rps-start-image:hover, #rps-yourSelection {
+    box-shadow: 0px 0px 8px 8px rgb(65, 105, 225, 0.7);
+}
+
+#rps-botSelection {
+    box-shadow: 0px 0px 8px 8px rgb(255, 0, 0, 0.7);
+}
+
+.rps-result {
+    width: 150px;
+    height: 150px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#random-user-output {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.random-user-details {
+    padding: 16px;
+}
+
+.bj-box {
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 1000px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.bj-display-box {
+    background-image: url(https://image.freepik.com/free-vector/poker-table-background-green-color_47243-1073.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    margin-top: 24px;
+}
+
+.bj-display-table {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.bj-play-box {
+    height: 450px;
+    display: flex;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.bj-user-box, .bj-bot-box {
+    border: 1px solid white;
+    width: 500px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.score-display {
+    margin-top: 16px;
+    height: 30px;
+}
+
+#bj-user-cards, #bj-bot-cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 370px;
+    overflow: hidden;
+}
+
+.bj-card {
+    width: 80px;
+    height: 120px;
+    margin: 16px;
+}
+
+.bj-table-elem {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}

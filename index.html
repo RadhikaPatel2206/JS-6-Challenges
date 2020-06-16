@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Challenges</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <!-- Your age in days -->
+    <div class="flex-container">
+        <div class="box">
+            <div>
+                <h1>Challenge 1: Your age in days</h1>
+            </div>
+            <div class="button-div">
+                <button class="btn btn-lg btn-primary" onclick="calculateAge()">Click Me</button>
+                <button class="btn btn-lg btn-secondary" onclick="resetAge()">Reset</button>
+            </div>
+            <div id="age-output">
+                <!-- Output will go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Random Dog generator -->
+    <div class="flex-container">
+        <div class="box">
+            <div>
+                <h1>Challenge 2: Random Dog Generator</h1>
+            </div>
+            <div class="button-div">
+                <button class="btn btn-lg btn-success" onclick="generateDog()">Generate</button>
+            </div>
+            <div id="dog-output">
+                <!-- Output will go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Rock, Paper, Scissor -->
+    <div class="flex-container">
+        <div class="box">
+            <div>
+                <h1>Challenge 3: Rock, Paper, Scissor</h1>
+            </div>
+            <div id="rps-output">
+                <img class="rps-start-image" id="rock" onclick="rpsGame(this.id)" src="https://cliparting.com/wp-content/uploads/2016/10/Rock-clip-art-images-free-clipart.png">
+                <img class="rps-start-image" id="paper" onclick="rpsGame(this.id)" src="http://clipartbarn.com/wp-content/uploads/2017/08/Paper-clip-art-free-clipart-images-3-4.png">
+                <img class="rps-start-image" id="scissor" onclick="rpsGame(this.id)" src="http://clipartbarn.com/wp-content/uploads/2016/10/Scissors-clipart-scissor-image-1-2.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Change all button color -->
+    <div class="flex-container">
+        <div class="box">
+            <div>
+                <h1>Challenge 4: Change the color of all buttons</h1>
+            </div>
+            <div class="button-div">
+                <select class="btn btn-lg btn-light" onchange="changeButtonColor(this.value)">
+                    <option selected value="reset">Reset</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="random">Random</option>
+                </select>
+
+                <button class="btn btn-lg btn-danger">Wee</button>
+                <button class="btn btn-lg btn-warning">Yahoo</button>
+                <button class="btn btn-lg btn-success">Google</button>
+                <button class="btn btn-lg btn-primary">Facebook</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BlackJack -->
+    <div class="flex-container">
+        <div class="bj-box">
+            <h1>Challenge 5: BlackJack</h1>
+            <h4 id="bj-message">Let's Play</h4>
+            <div class="bj-display-box">
+                <div class="bj-play-box">
+                    <div class="bj-user-box">
+                        <h3 class="score-display">You: <span id="bj-user-score">0</span></h3>
+                        <div id="bj-user-cards">
+                            <!-- Show user cards here -->
+                        </div>
+                    </div>
+                    <div class="bj-bot-box">
+                        <h3 class="score-display">Dealer: <span id="bj-bot-score">0</span></h3>
+                        <div id="bj-bot-cards">
+                            <!-- Show bot cards here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <button class="btn btn-primary mx-2" onclick="bjHit()">Hit</button>
+                    <button class="btn btn-warning mx-2" onclick="bjStand()">Stand</button>
+                    <button class="btn btn-danger mx-2" onclick="bjDeal()">Deal</button>
+                </div>
+            </div>
+            <table class="bj-display-table">
+                <tr>
+                    <th class="bj-table-elem">Wins</th>
+                    <th class="bj-table-elem">Losses</th>
+                    <th class="bj-table-elem">Draws</th>
+                </tr>
+                <tr>
+                    <td class="bj-table-elem" id="bj-win-count">0</td>
+                    <td class="bj-table-elem" id="bj-lost-count">0</td>
+                    <td class="bj-table-elem" id="bj-draw-count">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Random User generator -->
+    <div class="flex-container">
+        <div class="box">
+            <div>
+                <h1>Challenge 6: Random User Generator</h1>
+            </div>
+            <div id="random-user-output">
+                <!-- Random user goes here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
